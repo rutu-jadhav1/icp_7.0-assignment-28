@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=d, initial-scale=1.0">
     <title>Assignment 28</title>
+    <style>
+        body{
+            background-color: #f7f6f6;
+        }
+        .product-card{
+            background-color: white;
+            width: 200px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 30px auto;
+            padding-top: 10px;
+        }
+        .watch1{
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+            height: 150px;
+            display: block;
+            margin: 10px auto;
+            padding-top: 10px;
+        }
+        .card-body{
+            margin-left: 7px;
+            padding-bottom: 10px;
+        }
+        .watch-title{
+            font-size: 18px;
+        }
+        .product-description{
+            font-size: 14px;
+        }
+        .product-price{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .quantity-btn-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-quantity{
+            height: 25px;
+        }
+        .quantity-text{
+            font-size: 25px;
+            margin: auto 10px;
+            cursor: pointer;
+        }
+        .btn-buyNow{
+            display: block;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 5px 20px;
+            cursor: pointer;
+            margin: 10px auto;
+          
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="product-card">
+        <img src="./img/sport-removebg-preview.png" class="watch1"/>
+        <div class="card-body">
+            <h1 class="watch-title">Watch</h1>
+            <p class="product-description">
+                V2A Chronograph Analogue and Digital Sports Unisex Watch
+            </p>
+
+            <p class="product-price">₹ 679/-</p>
+
+            <p id="show-quantity">1 x 679</p>
+            <p id="show-total">Total : 679</p>
+
+
+            <div class="quantity-btn-container">
+                <img src="./img/minus.png" class="btn-quantity" onclick="dec()"/>
+
+                <span class="quantity-text" id="quatity-text">1</span>
+
+                <img src="./img/plus.png" class="btn-quantity" onclick="inc()"/>
+            </div>
+
+            <button type="button" class="btn-buyNow">Buy Now</button>
+        </div>
+    </div>
 </body>
 </html>
